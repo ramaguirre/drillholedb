@@ -1,0 +1,21 @@
+[33m9ce1238[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: commit: zip aarmella_traces.dxf
+[33m92010ab[m HEAD@{1}: reset: moving to 92010ab
+[33me6c28d5[m HEAD@{2}: commit: Zip aarmella_tarces.dxf
+[33m43cc9cd[m HEAD@{3}: commit: Add .gitignore to exclude large trace files
+[33mf7f5245[m HEAD@{4}: commit: Refactor code structure for improved readability and maintainability
+[33m92010ab[m HEAD@{5}: commit: Add function to convert dip and azimuth angles to unit vector
+[33m78ea08e[m HEAD@{6}: commit: Fix dogleg severity calculation by using unit vectors to calculate subtended angle beta
+[33m5e7f441[m HEAD@{7}: commit: Refactor notebook execution counts and update widget model IDs
+[33m95a9cb7[m HEAD@{8}: commit: Before Switching to Haversine
+[33mfc2b2e3[m HEAD@{9}: commit: Refactor code structure for improved readability and maintainability
+[33mb834d9a[m[33m ([m[1;31morigin/chat_gpt_algo[m[33m)[m HEAD@{10}: checkout: moving from chat_gpt_algo to main
+[33mb834d9a[m[33m ([m[1;31morigin/chat_gpt_algo[m[33m)[m HEAD@{11}: checkout: moving from chat_gpt_algo to chat_gpt_algo
+[33mb834d9a[m[33m ([m[1;31morigin/chat_gpt_algo[m[33m)[m HEAD@{12}: checkout: moving from main to chat_gpt_algo
+[33mb834d9a[m[33m ([m[1;31morigin/chat_gpt_algo[m[33m)[m HEAD@{13}: checkout: moving from chat_gpt_algo to main
+[33mb834d9a[m[33m ([m[1;31morigin/chat_gpt_algo[m[33m)[m HEAD@{14}: checkout: moving from main to chat_gpt_algo
+[33mb834d9a[m[33m ([m[1;31morigin/chat_gpt_algo[m[33m)[m HEAD@{15}: commit: Refactor code structure for improved readability and maintainability
+[33mc41fbd0[m HEAD@{16}: commit: Update survey data processing in Ramon notebook
+[33mf20da8c[m HEAD@{17}: commit: Add initial test for vectorized _build_all_trajectories implementation
+[33m7151709[m HEAD@{18}: commit: Enhance DrillholeDatabase to preserve all input columns and calculate dogleg severity with an ignored mask; add tests for column preservation and functionality
+[33m8247fb7[m HEAD@{19}: commit: Refactor drillhole database to update dogleg severity calculation and improve survey data handling
+[33m193e89c[m HEAD@{20}: commit (initial): Add initial test traces export CSV file with extensive data
