@@ -25,7 +25,7 @@ Basic Usage:
     >>> db = DrillholeDatabase(collar_df, survey_df)
     >>> 
     >>> # Query individual drillhole
-    >>> dh = db.get_drillhole('PB-01')
+    >>> dh = db.get_drillhole('HOLE-01')
     >>> print(dh.summary())
 """
 

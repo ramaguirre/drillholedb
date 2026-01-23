@@ -8,20 +8,20 @@ Example Input Data Formats:
 ---------------------------
 Collar Data (DataFrame):
     HOLEID    EAST        NORTH       RL        DEPTH
-    PB-01     483624.56   7436035.26  2401.64   300.0
-    PB-02     483830.33   7435840.12  2422.79   350.0
+    HOLE-01   483624.56   7436035.26  2401.64   300.0
+    HOLE-02   483830.33   7435840.12  2422.79   350.0
     
 Survey Data (DataFrame):
     HOLEID    DEPTH    DIP      AZIMUTH
-    PB-01     0.0      89.656   88.211
-    PB-01     10.0     89.724   92.555
-    PB-02     0.0      88.500   85.000
+    HOLE-01   0.0      89.656   88.211
+    HOLE-01   10.0     89.724   92.555
+    HOLE-02   0.0      88.500   85.000
     
 Interval Data (DataFrame):
     HOLEID    SAMPFROM  SAMPTO   Au_ppm   Cu_pct
-    PB-01     0.0       2.0      0.5      1.2
-    PB-01     2.0       4.0      0.8      1.5
-    PB-02     0.0       3.0      0.3      0.9
+    HOLE-01   0.0       2.0      0.5      1.2
+    HOLE-01   2.0       4.0      0.8      1.5
+    HOLE-02   0.0       3.0      0.3      0.9
 """
 
 import numpy as np
@@ -732,7 +732,7 @@ class DrillholeDatabase:
         Example:
             >>> # Desurvey gamma log data
             >>> gamma_data = pd.DataFrame({
-            ...     'holeid': ['PB-01', 'PB-01', 'PB-02'],
+            ...     'holeid': ['HOLE-01', 'HOLE-01', 'HOLE-02'],
             ...     'depth': [10.0, 20.0, 15.0],
             ...     'gamma_cps': [150, 180, 200]
             ... })
@@ -878,7 +878,7 @@ class DrillholeDatabase:
         Example:
             >>> # Desurvey assay data
             >>> assay_data = pd.DataFrame({
-            ...     'holeid': ['PB-01', 'PB-01', 'PB-02'],
+            ...     'holeid': ['HOLE-01', 'HOLE-01', 'HOLE-02'],
             ...     'from': [0.0, 10.0, 0.0],
             ...     'to': [10.0, 20.0, 15.0],
             ...     'Au_ppm': [0.5, 1.2, 0.8]

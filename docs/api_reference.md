@@ -59,7 +59,7 @@ Get a Drillhole object for a specific holeid.
 
 **Example:**
 ```python
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 print(dh.summary())
 ```
 
@@ -146,7 +146,7 @@ Desurvey any point data using pre-calculated minimum curvature trajectories.
 **Example:**
 ```python
 custom_points = pd.DataFrame({
-    'holeid': ['PB-01', 'PB-01'],
+    'holeid': ['HOLE-01', 'HOLE-01'],
     'depth': [10.0, 20.0],
     'measurement': [100, 150]
 })
@@ -240,7 +240,7 @@ traces = db.get_all_traces()
 traces.to_csv('all_traces.csv', index=False)
 
 # Get specific holes
-traces = db.get_all_traces(['PB-01', 'PB-02', 'PB-03'])
+traces = db.get_all_traces(['HOLE-01', 'HOLE-02', 'HOLE-03'])
 ```
 
 ---

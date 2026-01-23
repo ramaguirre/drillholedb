@@ -83,7 +83,7 @@ The library automatically:
 
 ```python
 # Query specific drillhole
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 
 # Access interval data with coordinates
 assays = dh.interval_data['assays']
@@ -100,7 +100,7 @@ db.add_interval_data(lith_df, name='lithology')
 db.add_interval_data(geotech_df, name='geotech')
 
 # Access all datasets
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 print(dh.interval_data.keys())  # ['assays', 'lithology', 'geotech']
 ```
 
@@ -136,7 +136,7 @@ gamma_df = pd.read_csv('gamma_log.csv')
 db.add_point_data(gamma_df, name='gamma')
 
 # Access with coordinates
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 gamma = dh.point_data['gamma']
 print(gamma[['depth', 'gamma_cps', 'x', 'y', 'z']])
 ```
@@ -151,7 +151,7 @@ traces = db.get_all_traces()
 traces.to_csv('all_traces.csv', index=False)
 
 # Export specific holes
-traces = db.get_all_traces(['PB-01', 'PB-02', 'PB-03'])
+traces = db.get_all_traces(['HOLE-01', 'HOLE-02', 'HOLE-03'])
 ```
 
 ### Calculate Statistics
@@ -161,7 +161,7 @@ traces = db.get_all_traces(['PB-01', 'PB-02', 'PB-03'])
 stats = db.calculate_statistics()
 
 # Calculate for specific holes
-stats = db.calculate_statistics(['PB-01', 'PB-02'])
+stats = db.calculate_statistics(['HOLE-01', 'HOLE-02'])
 
 # View results
 print(stats[['holeid', 'hole_length', 'tvd', 'horizontal_disp']])
@@ -173,7 +173,7 @@ print(stats[['holeid', 'hole_length', 'tvd', 'horizontal_disp']])
 import pyvista as pv
 
 # Get single drillhole trace
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 trace = dh.get_pyvista_trace(point_spacing=1.0)
 
 # Visualize
@@ -196,7 +196,7 @@ if 'assays' in dh.interval_data:
 ```python
 # Desurvey custom point data
 custom_df = pd.DataFrame({
-    'holeid': ['PB-01', 'PB-01'],
+    'holeid': ['HOLE-01', 'HOLE-01'],
     'depth': [10.0, 20.0],
     'measurement': [100, 150]
 })
@@ -208,7 +208,7 @@ print(desurveyed[['holeid', 'depth', 'measurement', 'x', 'y', 'z']])
 ### Interpolation at Specific Depths
 
 ```python
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 
 # Get XYZ at specific depth
 x, y, z = dh.interpolate_at_depth(50.0, attribute='xyz')

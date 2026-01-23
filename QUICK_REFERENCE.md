@@ -28,7 +28,7 @@ db = DrillholeDatabase(collar_df, survey_df)
 holes = db.get_holeid_list()
 
 # Get specific hole
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 
 # Summary
 print(db.summary())
@@ -126,7 +126,7 @@ print(db.summary())
 
 **Query & analyze:**
 ```python
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 length = dh.calculate_hole_length()
 if 'assays' in dh.interval_data:
     assays = dh.interval_data['assays']

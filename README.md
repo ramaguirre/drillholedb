@@ -56,7 +56,7 @@ survey_df = pd.read_csv('survey.csv')
 db = DrillholeDatabase(collar_df, survey_df)
 
 # Query specific drillhole
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 print(dh.summary())
 
 # Add interval data (e.g., assays)
@@ -64,7 +64,7 @@ assay_df = pd.read_csv('assays.csv')
 db.add_interval_data(assay_df, name='assays')
 
 # Access desurveyed data
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 print(dh.interval_data['assays'][['from', 'to', 'Au_ppm', 'mid_x', 'mid_y', 'mid_z']])
 ```
 
@@ -73,20 +73,17 @@ print(dh.interval_data['assays'][['from', 'to', 'Au_ppm', 'mid_x', 'mid_y', 'mid
 ### Collar Data
 | HOLEID | EAST | NORTH | RL | DEPTH |
 |--------|------|-------|-------|-------|
-| PB-01 | 483624.56 | 7436035.26 | 2401.64 | 300.0 |
-| PB-02 | 483830.33 | 7435840.12 | 2422.79 | 350.0 |
+| HOLE-01 | 483624.56 | 7436035.26 | 2401.64 | 300.0 |
+| HOLE-02 | 483830.33 | 7435840.12 | 2422.79 | 350.0 |
 
 ### Survey Data
 | HOLEID | DEPTH | DIP | AZIMUTH |
 |--------|-------|-----|---------|
-| PB-01 | 0.0 | 89.656 | 88.211 |
-| PB-01 | 10.0 | 89.724 | 92.555 |
-
-### Interval Data (e.g., Assays)
-| HOLEID | SAMPFROM | SAMPTO | Au_ppm | Cu_pct |
+| HOLE-01 | 0.0 | 89.656 | 88.211 |
+| HOLE-01 | 10.0 | 89.724 | 92.555 |
 |--------|----------|--------|--------|--------|
-| PB-01 | 0.0 | 2.0 | 0.5 | 1.2 |
-| PB-01 | 2.0 | 4.0 | 0.8 | 1.5 |
+| HOLE-01 | 0.0 | 2.0 | 0.5 | 1.2 |
+| HOLE-01 | 2.0 | 4.0 | 0.8 | 1.5 |
 
 ## Key Features
 
@@ -152,7 +149,7 @@ print(stats[['holeid', 'hole_length', 'tvd', 'horizontal_disp']].head())
 
 ```python
 # Get PyVista polydata for visualization
-dh = db.get_drillhole('PB-01')
+dh = db.get_drillhole('HOLE-01')
 trace_3d = dh.get_pyvista_trace(point_spacing=1.0)
 
 # Plot with PyVista
